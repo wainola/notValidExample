@@ -154,8 +154,8 @@ const MainView = () => {
 
 function App() {
   const [state, setState] = useState({
-    logged: true,
-    mainView: true,
+    logged: false,
+    mainView: false,
     service1: false,
     service2: false,
     serviceHealth1: false,
@@ -180,7 +180,7 @@ function App() {
   };
 
   return (
-    <Context.Provider value={{ stateSimulations, setSimulations }}>
+    <Context.Provider value={{ stateSimulations, setSimulations, state, setState }}>
       <div>
         <div className="mainControls">
           <h2>Simulations</h2>
